@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 
 <html>
@@ -8,17 +9,16 @@
 </head>
 <body>
 
-	<main style="padding-top: 100px;">
+	<main data-editor="InlineEditor" data-collaboration="false" style="padding-top: 100px;">
 		<div class="row row-editor centered">
-			<form method="POST" enctype="multipart/form-data">
+			<form method="POST" enctype="multipart/form-data"  novalidate>
 				{% csrf_token %}
 				{{ form.media }}
 				{{form}}
-				<button type="submit">add</button>
+				<input type="submit" value="add">
 			</form>
 		</div>
 	</main>
-
 </body>
 
 </html>

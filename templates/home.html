@@ -14,5 +14,13 @@
         <hr>
     {% endfor %}
         
+
+    <script>
+        var img = document.getElementsByTagName("img");
+        for (i = 0; i < img.length; i++) {
+            node=img[i]
+            node.setAttribute("style", "max-width:100%; height:auto;");
+        }
+    </script>
 </body>
 </html>
