@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>CKEditor 5 InlineEditor build</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+	<main style="padding-top: 100px;">
+		<div class="row row-editor centered">
+			<form method="POST" enctype="multipart/form-data">
+				{% csrf_token %}
+				{{ form.media }}
+				{{form}}
+				<button type="submit">add</button>
+			</form>
+		</div>
+	</main>
+
+</body>
+
+</html>
